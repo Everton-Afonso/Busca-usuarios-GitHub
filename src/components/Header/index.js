@@ -5,7 +5,7 @@ function Header() {
   return (
     <div id="cabe" className="jumbotron">
       <h1 className="display-4">Sistemas de Informação</h1>
-      <p className="lead">Busca por usuários do GitHub</p>
+      <p className="lead">Lista de alguns usuários do GitHub</p>
     </div>
   );
 }

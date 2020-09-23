@@ -19,25 +19,26 @@ export default function App() {
   return (
     <div className="container">
       <div className="App">
-        <h1>Lista de usuários</h1>
-        <table className="table">
-          <thead>
-            <tr>
-              <th>Usuário </th>
-              <th>Link</th>
-            </tr>
-          </thead>
-          <tbody>
+        <h1 className="lead">Lista de usuários</h1>
+        <div className="row">
+          <div className="col-md">
             {casos.map(function (item, index) {
               return (
-                <tr key={index}>
-                  <td>{item.login}</td>
-                  <td>{item.html_url}</td>
-                </tr>
+                <div className="box">
+                  <div className="card mb-4" key={index}>
+                    <img className="card-img" src={item.avatar_url} />
+                    <div className="item">
+                      <h5> Nome de usuários: {item.login} </h5>
+                      <a href={item.html_url} target="_blank">
+                        Repositório GitHub
+                      </a>
+                    </div>
+                  </div>
+                </div>
               );
             })}
-          </tbody>
-        </table>
+          </div>
+        </div>
       </div>
     </div>
   );
